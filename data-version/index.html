@@ -76,7 +76,7 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#current-d-melanogaster-network">Current D. melanogaster Network</a>
+    <li class="toctree-l3"><a class="reference internal" href="#current-d-melanogaster-network-updated-2024-07-17">Current D. melanogaster Network [Updated 2024-07-17]</a>
     </li>
         </ul>
     </li>
@@ -106,7 +106,7 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#2024-06-24">2024-06-24:</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#current-b-subtilis-network">Current B. subtilis Network</a>
+    <li class="toctree-l3"><a class="reference internal" href="#current-b-subtilis-network-updated-2024-07-17">Current B. subtilis Network [Updated 2024-07-17]</a>
     </li>
         </ul>
     </li>
@@ -132,7 +132,7 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#2024-06-24_1">2024-06-24:</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#current-d-rerio-network">Current D. rerio Network</a>
+    <li class="toctree-l3"><a class="reference internal" href="#current-d-rerio-network-updated-2024-07-17">Current D. rerio Network [Updated 2024-07-17]</a>
     </li>
         </ul>
     </li>
@@ -148,7 +148,9 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#2024-03-28">2024-03-28:</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#gene-ontology-data-structure">Gene Ontology Data Structure</a>
+    <li class="toctree-l3"><a class="reference internal" href="#2024-07-17">2024-07-17:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#gene-ontology-data-structure-updated-2024-07-17">Gene Ontology Data Structure [Updated 2024-07-17]</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#taxon-id-source">Taxon ID source:</a>
     </li>
@@ -169,6 +171,8 @@
     <li class="toctree-l3"><a class="reference internal" href="#2024-06-11_2">2024-06-11:</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#2024-06-24_2">2024-06-24:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2024-07-17_1">2024-07-17:</a>
     </li>
         </ul>
     </li>
@@ -241,10 +245,10 @@
 <li>Removed qualifiers with "NOT" preceding them using <a href="https://github.com/Reed-CompBio/protein-weaver/blob/main/scripts/RemoveNotQualifier.R">`scripts/RemoveNotQualifier.R</a></li>
 <li>Reduced inferred ProGo edges to 413,704.</li>
 </ul>
-<h3 id="current-d-melanogaster-network">Current <em>D. melanogaster</em> Network</h3>
+<h3 id="current-d-melanogaster-network-updated-2024-07-17">Current <em>D. melanogaster</em> Network [Updated 2024-07-17]</h3>
 <pre><code>| Proteins | Interactions (ProPro) | Annotations (ProGo) |
 | -------- | --------------------- | :------------------ |
-| 11501    | 233054                | 510962              |
+| 11501    | 233054                | 482391              |
 </code></pre>
 <h2 id="bacillus-subtilis-data-sources"><em>Bacillus subtilis</em> Data Sources</h2>
 <h3 id="2023-10-18-beta">2023-10-18 (BETA):</h3>
@@ -301,10 +305,10 @@
 <ul>
 <li>Remove "self-edges" from PPI data.</li>
 </ul>
-<h3 id="current-b-subtilis-network">Current <em>B. subtilis</em> Network</h3>
+<h3 id="current-b-subtilis-network-updated-2024-07-17">Current <em>B. subtilis</em> Network [Updated 2024-07-17]</h3>
 <pre><code>| Proteins | Interactions (ProPro) | Annotations (ProGo) |
 | -------- | --------------------- | :------------------ |
-| 1933     | 6441                  | 65063               |
+| 1933     | 6441                  | 59510               |
 </code></pre>
 <h2 id="danio-rerio-data-sources"><em>Danio rerio</em> Data Sources</h2>
 <h3 id="2024-03-18_2">2024-03-18:</h3>
@@ -368,10 +372,10 @@
 <li>Remove trailing whitespaces from some names according to <code>ZebrafishDataMerging.Rmd</code>.</li>
 <li>Remove "self-edges" from PPI data.</li>
 </ul>
-<h3 id="current-d-rerio-network">Current <em>D. rerio</em> Network</h3>
+<h3 id="current-d-rerio-network-updated-2024-07-17">Current <em>D. rerio</em> Network [Updated 2024-07-17]</h3>
 <pre><code>| Proteins | Interactions (ProPro) | Annotations (ProGo) |
 | -------- | --------------------- | :------------------ |
-| 6438     | 45003                 | 108758              |
+| 6438     | 45003                 | 103139              |
 </code></pre>
 <h2 id="gene-ontology-hierarchy-data-sources">Gene Ontology Hierarchy Data Sources</h2>
 <h3 id="2023-09-29">2023-09-29:</h3>
@@ -398,13 +402,20 @@
 <p>Joined the data together with <a href="https://github.com/Reed-CompBio/protein-weaver/blob/main/scripts/GeneOntologyNeverAnnotate.R"><code>scripts/GeneOntologyNeverAnnotate.R</code></a>.</p>
 </li>
 <li>
-<p><a href="https://github.com/Reed-CompBio/protein-weaver/blob/main/data/GeneOntology/gocheck_do_not_annotate.txt"><code>gocheck_do_not_annotate.txt</code></a> parsed from <code>gocheck_do_not_annotate.obo</code> using <code>scripts/ParseOBOtoTXT.ipynb</code> and merged into <code>go_2024-03-28.txt</code>.</p>
+<p><a href="https://github.com/Reed-CompBio/protein-weaver/blob/main/data/GeneOntology/gocheck_do_not_annotate.txt"><code>gocheck_do_not_annotate.txt</code></a> parsed from <code>gocheck_do_not_annotate.obo</code> <a href="https://current.geneontology.org/ontology/subsets/gocheck_do_not_annotate.obo">(Source)</a> using <code>scripts/ParseOBOtoTXT.ipynb</code> and merged into <code>go_2024-03-28.txt</code>.</p>
 </li>
 </ul>
-<h3 id="gene-ontology-data-structure">Gene Ontology Data Structure</h3>
+<h3 id="2024-07-17">2024-07-17:</h3>
+<ul>
+<li>[<code>go_2024-07-17.obo</code>] processed into <code>go_2024-07-17.txt</code>, <code>is_a_import_2024-07-17.tsv</code>, and <code>relationship_import_2024-07-17.tsv</code>.</li>
+<li>[<code>is_a_import_2024-07-17.tsv</code>] created with <code>scripts/ParseOntologyRelationship.ipynb</code>.</li>
+<li>[<code>relationship_import_2024-07-17.tsv</code>] created with <code>scripts/ParseOntologyRelationship.ipynb</code>.</li>
+<li>[<code>go_2024-07-17.txt</code>] created with <code>scripts/ParseOBOtoTXT.ipynb</code> and <code>scripts/GeneOntologyNeverAnnotate.R</code>.</li>
+</ul>
+<h3 id="gene-ontology-data-structure-updated-2024-07-17">Gene Ontology Data Structure [Updated 2024-07-17]</h3>
 <pre><code>| GO Terms | &quot;is_a&quot; Relationships (GoGo) |
 | -------- | :-------------------------- |
-| 42854    | 68308                       |
+| 42231    | 66168                       |
 </code></pre>
 <h3 id="taxon-id-source">Taxon ID source:</h3>
 <p><a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/">NCBI taxonomy browser</a>
@@ -464,6 +475,18 @@ Looked up species name and got taxon ID.</p>
 <li>Removed trailing whitespaces from <em>D. rerio</em> data.</li>
 <li>Removed "self-edges" i.e., interactions between two copies of the same protein to improve path algorithm performance.<ul>
 <li>309 "self-edges" were removed from the data from <em>B. subtilis</em> and <em>D. rerio</em>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="2024-07-17_1">2024-07-17:</h3>
+<ul>
+<li>Updated full Gene Ontology dataset including hierarchy and descriptions of GO terms.</li>
+<li>The Gene Ontology removed 660 GO terms in the update. This resulted in removal of previousl existing edges to GO terms.<ul>
+<li>Removed 28,571 ProGo edges in <em>D. melanogaster</em>.</li>
+<li>Removed 5,553 ProGo edges in <em>B. subtilis</em>.</li>
+<li>Removed 5,619 ProGo edges in <em>D. rerio</em>.</li>
+<li>Removed 2,140 GoGo edges.</li>
+<li>Removed 41,883 edges total.</li>
 </ul>
 </li>
 </ul>
