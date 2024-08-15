@@ -1699,3 +1699,8 @@ select {
 .degree-icon-container:hover {
     display: block;
 }
+
+.link-error-suggestion{
+    border-bottom: 2px solid black;
+    color: rgb(7, 101, 183);
+}

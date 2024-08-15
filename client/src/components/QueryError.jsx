@@ -27,10 +27,11 @@ export default function QueryError({ errorMessage, query }) {
                 We encountered an error while retrieving the network. <br></br>{" "}
                 Reason: {errorMessage}
                 <br></br>{" "}
+                <br></br>{" "}
                 {errorSuggestion == "unknownProtein" && (
                     <div>
                         Search for protein in Uniprot{" "}
-                        <a
+                        <a className="link-error-suggestion"
                             href={
                                 "https://www.uniprot.org/uniprotkb?query=" +
                                 query.protein
@@ -45,7 +46,7 @@ export default function QueryError({ errorMessage, query }) {
                 {errorSuggestion == "unknownGoTerm" && (
                     <div>
                         Search for go term in Amigo{" "}
-                        <a
+                        <a className="link-error-suggestion"
                             href={
                                 "https://amigo.geneontology.org/amigo/search/ontology?q=" +
                                 query.goTerm
