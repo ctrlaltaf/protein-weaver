@@ -13,7 +13,6 @@ export default class Degree {
     constructor(driver) {
         this.driver = driver;
     }
-
     async getdegree(id) {
         const session = this.driver.session();
         const res = await session.executeRead((tx) =>
@@ -23,7 +22,7 @@ export default class Degree {
                 return pr.degree as degree
             `,
                 {
-                    id: id
+                    id: id,
                 }
             )
         );
