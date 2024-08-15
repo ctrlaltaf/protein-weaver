@@ -850,7 +850,9 @@ export default function Query() {
                         activeModeButton={activeModeButton}
                         exState={exState}
                     />
-                    {hasError && <QueryError errorMessage={errorMessage} />}
+                    {hasError && (
+                        <QueryError errorMessage={errorMessage} query={query} />
+                    )}
 
                     {isLoading && <div className="loader"></div>}
                 </div>
